@@ -1,7 +1,13 @@
+.fix{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
 .username-here{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 50px;
 }
 
@@ -9,6 +15,9 @@
     font-size: 300%;
 }
 
-button{
+.btn{
 font-size: 24px !important;
+width: 200px;
+
 }
+
