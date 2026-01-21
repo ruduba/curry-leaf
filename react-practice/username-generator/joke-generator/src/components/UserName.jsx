@@ -4,22 +4,19 @@ import "./component.css"
 
 const UserName = () => {
 
-const [username1, setUsername1] = useState("");
-const [username2, setUsername2] = useState("");
 
-const fetch1 = () => {
-            
-            fetch("https://word-generator-api.adriencarpentier.com/en/word/get")
-            .then((res) => res.json())
-            .then((data) => setUsername1(data))
-            
-        }
+const [username, setUsername] = useState("Username goes here");
 
-const fetch2 = () => {
-            fetch(" https://random-word-api.herokuapp.com/word?number=1")
-            .then((res) => res.json())
-            .then((data) => setUsername2(data))
-        }
+const fetchUsername = async () =>{
+    const r1 = await fetch("https://random-words-api.kushcreates.com/api?language=en&category=animals&words=1")
+    const d1 = await r1.json();
+
+    const r2 = await fetch(" https://random-word-api.herokuapp.com/word?number=1")
+    const d2 = await r2.json();
+
+    setUsername(` ${d2} ${d1[0].word}`)
+}
+
 
 return(
     < >
@@ -28,11 +25,11 @@ return(
 
         
 
-        <p>{username1+username2}</p>
+        <p>{username}</p>
                 
     </div>
     <div className="btn">
-        <Button callApi = {fetch2}/>
+        <Button callApi = {fetchUsername} />
        </div>
 
         
