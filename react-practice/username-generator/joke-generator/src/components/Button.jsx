@@ -5,9 +5,9 @@ import "./component.css"
 const Button = (props) => {
 return(
     <button
-    onClick={props.doSomething}>
+    onClick={props.callApi}>
     /get!
-</button>
+    </button>
 
 );
 
