@@ -1,0 +1,29 @@
+.App{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.buttons{
+  
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+  width: 150px;
+}
+
+input[type = "password"]{
+  background-color: black;
+  border: 2px dotted rgb(0, 255, 0);
+  font-size: 170%;
+  text-align: center;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
